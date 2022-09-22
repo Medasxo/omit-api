@@ -17,6 +17,7 @@ app.post("/omit", (req, res) => {
   const omittedString = initialString
     .replace(new RegExp(removableLetterLowerCase, "g"), "")
     .replace(new RegExp(removableLetterUpperCase, "g"), "");
+  console.log(omittedString);
   res.send(omittedString);
 });
 
