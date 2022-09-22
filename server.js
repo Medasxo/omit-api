@@ -5,6 +5,10 @@ const app = express();
 
 app.use(bodyParser.json());
 
+app.get("/", (req, res) => {
+    res.send("API works")
+});
+
 app.post("/omit", (req, res) => {
   const { initialString, removableLetter } = req.body;
   const removableLetterUpperCase = removableLetter.toUpperCase();
